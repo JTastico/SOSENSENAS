@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Gesture Alert Vision</string>
+    <string name="title_activity_main">Gesture Alert Vision</string>
+    <string name="package_name">com.gestureapp.alertvision</string>
+    <string name="custom_url_scheme">com.gestureapp.alertvision</string>
+</resources>
