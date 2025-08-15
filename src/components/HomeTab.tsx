@@ -42,16 +42,16 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
       iconColor: 'text-purple-600',
       hoverGlow: 'hover:shadow-purple-200'
     },
-    {
-      id: 'stats',
-      title: 'Estadísticas',
-      description: 'Ver métricas del sistema',
-      icon: BarChart3,
-      color: 'from-green-500 to-green-600',
-      iconBg: 'bg-gradient-to-r from-green-100 to-green-200',
-      iconColor: 'text-green-600',
-      hoverGlow: 'hover:shadow-green-200'
-    }
+    // {
+    //   id: 'stats',
+    //   title: 'Estadísticas',
+    //   description: 'Ver métricas del sistema',
+    //   icon: BarChart3,
+    //   color: 'from-green-500 to-green-600',
+    //   iconBg: 'bg-gradient-to-r from-green-100 to-green-200',
+    //   iconColor: 'text-green-600',
+    //   hoverGlow: 'hover:shadow-green-200'
+    // }
   ];
 
   return (
