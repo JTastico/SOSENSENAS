@@ -3,6 +3,8 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Camera, Hand, Database, BarChart3, Play, Sparkles, Zap, Target } from 'lucide-react';
 import { useSigns } from '@/hooks/useSigns';
+import madreImg from "../assets/madre_inicio.png";
+import logoSenas from "../assets/logo_senas.png";
 
 interface HomeTabProps {
   onNavigate: (tab: string) => void;
@@ -22,6 +24,10 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
       iconColor: 'text-blue-600',
       hoverGlow: 'hover:shadow-blue-200'
     },
+
+    //Lista de acciones rápidas, deshabilitadas temporalmente
+
+
     // {
     //   id: 'detection',
     //   title: 'Ver Detección',
@@ -32,16 +38,16 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
     //   iconColor: 'text-pink-600',
     //   hoverGlow: 'hover:shadow-pink-200'
     // },
-    {
-      id: 'database',
-      title: 'Base de Señas',
-      description: 'Explorar señas guardadas',
-      icon: Database,
-      color: 'from-purple-500 to-purple-600',
-      iconBg: 'bg-gradient-to-r from-purple-100 to-purple-200',
-      iconColor: 'text-purple-600',
-      hoverGlow: 'hover:shadow-purple-200'
-    },
+    // {
+    //   id: 'database',
+    //   title: 'Base de Señas',
+    //   description: 'Explorar señas guardadas',
+    //   icon: Database,
+    //   color: 'from-purple-500 to-purple-600',
+    //   iconBg: 'bg-gradient-to-r from-purple-100 to-purple-200',
+    //   iconColor: 'text-purple-600',
+    //   hoverGlow: 'hover:shadow-purple-200'
+    // },
     // {
     //   id: 'stats',
     //   title: 'Estadísticas',
@@ -60,14 +66,11 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
       <div className="text-center space-y-4">
         <div className="flex items-center justify-center mb-4">
           <div className="relative">
-            <img 
-              src="/lovable-uploads/43ca91a0-3b1f-4954-9bad-f23a9e6417f8.png" 
-              alt="SOS en SEÑAS" 
-              className="w-20 h-20 mr-4 drop-shadow-lg" 
+            <img
+              src={logoSenas}
+              alt="SOS en SEÑAS"
+              className=" h-20 mr-4 drop-shadow-lg"
             />
-            <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center animate-pulse">
-              <Zap className="w-3 h-3 text-white" />
-            </div>
           </div>
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -86,7 +89,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
         </h2>
         <div className="grid grid-cols-1 gap-4">
           {quickActions.map((action) => (
-            <Card 
+            <Card
               key={action.id}
               className={`p-4 bg-gradient-to-r from-white to-gray-50 border-2 border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer ${action.hoverGlow} hover:scale-[1.02] transform`}
               onClick={() => onNavigate(action.id)}
@@ -107,6 +110,42 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
           ))}
         </div>
       </div>
+
+
+      {/* Texto de la pagina  */}
+      <div className="space-y-4">
+        <h1 className="leading-[0.92] font-extrabold tracking-tight">
+            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem] text-[#5ea9e6]">
+              "Las <span className="text-[#ef5b98]">manos</span>
+            </span>
+            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem] text-[#5ea9e6]">
+              que hablan,
+            </span>
+            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem]">
+              <span className="text-[#ef5b98]">el corazón</span>{" "}
+              <span className="text-[#5ea9e6]">que</span>
+            </span>
+            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem] text-[#5ea9e6]">
+              siente"
+            </span>
+          </h1>
+
+          <p className="mt-6 max-w-xl text-sm text-gray-700">
+            Implementación de un Prototipo de Tecnología Profunda (Deep Tech)
+            para la atención de emergencias obstétricas en personas
+            sordasignantes y oralistas en Tacna
+          </p>
+        </div>
+
+        {/* Imagen derecha */}
+        <div className="w-1/2 max-w-[560px] flex-shrink-0">
+          <img
+            src={madreImg}
+            alt="Madre embarazada"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
 
       {/* Señas Guardadas */}
       <div className="space-y-4">

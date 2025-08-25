@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Camera, CameraOff, Play, Square, Timer, RotateCcw } from 'lucide-react';
 import { toast } from 'sonner';
+import logoSenas from "../assets/logo_senas.png";
 
 export const CameraView = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -120,6 +121,23 @@ export const CameraView = () => {
 
   return (
     <div className="space-y-4 sm:space-y-6">
+            <div className="text-center space-y-4">
+        <div className="flex items-center justify-center mb-4">
+          <div className="relative">
+            <img
+              src={logoSenas}
+              alt="SOS en SEÑAS"
+              className=" h-20 mr-4 drop-shadow-lg"
+            />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              SOS en SEÑAS
+            </h1>
+            <p className="text-blue-600 font-medium">Reconocimiento Inteligente</p>
+          </div>
+        </div>
+      </div>
       <Card className="p-3 sm:p-6 bg-white/90 backdrop-blur-sm border border-blue-200">
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
