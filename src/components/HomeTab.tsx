@@ -113,38 +113,40 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigate }) => {
 
 
       {/* Texto de la pagina  */}
-      <div className="space-y-4">
-        <h1 className="leading-[0.92] font-extrabold tracking-tight">
-            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem] text-[#5ea9e6]">
+      <div className="relative bg-gradient-to-b from-[#f6f9fc] to-[#fff0f5] overflow-hidden h-[500px]">
+        {/* Texto al frente */}
+        <div className="relative z-10 px-6 py-8">
+          <h1 className="leading-[1] font-extrabold tracking-tight">
+            <span className="block text-[9vw] text-[#5ea9e6]">
               "Las <span className="text-[#ef5b98]">manos</span>
             </span>
-            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem] text-[#5ea9e6]">
+            <span className="block text-[9vw] text-[#5ea9e6]">
               que hablan,
             </span>
-            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem]">
+            <span className="block text-[9vw]">
               <span className="text-[#ef5b98]">el corazón</span>{" "}
-              <span className="text-[#5ea9e6]">que</span>
             </span>
-            <span className="block text-[10vw] sm:text-[8rem] md:text-[10rem] text-[#5ea9e6]">
-              siente"
+            <span className="block text-[9vw] text-[#5ea9e6]">
+              que siente"
             </span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-sm text-gray-700">
-            Implementación de un Prototipo de Tecnología Profunda (Deep Tech)
-            para la atención de emergencias obstétricas en personas
-            sordasignantes y oralistas en Tacna
-          </p>
+            <p className="mt-4 text-sm text-gray-700 leading-relaxed">
+              Implementación de un <br />
+              Prototipo de Tecnología<br /> Profunda (Deep Tech)<br />
+              para la atención de <br />emergencias obstétricas en <br />personas
+              sordasignantes <br />y oralistas en Tacna
+            </p>
         </div>
 
-        {/* Imagen derecha */}
-        <div className="w-1/2 max-w-[560px] flex-shrink-0">
-          <img
-            src={madreImg}
-            alt="Madre embarazada"
-            className="w-full h-auto object-contain"
-          />
-        </div>
+        {/* Imagen de fondo a la derecha */}
+        <img
+          src={madreImg}
+          alt="Madre embarazada"
+          className="absolute left-1/4 top-1/3 -translate-y-1/3 h-[90vh] object-contain z-0 opacity-90"
+        />
+      </div>
+
 
 
       {/* Señas Guardadas */}
